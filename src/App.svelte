@@ -38,12 +38,12 @@
       JSON.stringify([...existingToDos, event.detail.todo])
     );
 
-    todos = [[...existingToDos, event.detail.todo]]; //load newly added todos
+    todos = [...existingToDos, event.detail.todo]; //load newly added todos
     isModalOpen = !isModalOpen; //close the modal form
   }
 </script>
 
-<main>
+<main class="py-4 px-2">
   <Header />
   <AddToDo on:openModal={toggleModal} />
   {#if isModalOpen}
@@ -51,18 +51,3 @@
   {/if}
   <ToDoList {todos} on:markDone={removeToDo} />
 </main>
-
-<style>
-  main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
-  }
-</style>

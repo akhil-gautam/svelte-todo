@@ -21,7 +21,7 @@
         <span>
           {item}
         </span>
-        <button class="btn btn-outline btn-primary" on:click={handleCick}>
+        <button class="btn btn-sm btn-outline btn-primary" on:click={handleCick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

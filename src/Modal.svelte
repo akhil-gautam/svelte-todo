@@ -30,8 +30,8 @@
         />
       </div>
       <div class="modal-action text-white">
+        <button class="btn btn-secondary" on:click={handleClick}>Close</button>
         <button class="btn btn-primary" type="submit">Save</button>
-        <button class="btn" on:click={handleClick}>Close</button>
       </div>
     </form>
   </div>
